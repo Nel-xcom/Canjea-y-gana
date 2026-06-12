@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Canjea y Gana! - Especial Mundial</title>
+    <!-- Google Fonts para una tipografía moderna y premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=13">
+</head>
+<body>
+    <!-- Fondo de estadio animado -->
+    <div id="stadium-bg"></div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="title">CANJEA <span class="gold-text">Y GANA</span></h1>
+            <p class="subtitle" id="subtitle-text">¡Elegí tu sobre de figuritas y descubrí tu premio para usar hoy en nuestro local!</p>
+        </header>
+
+        <section class="packs-container">
+            <!-- Los sobres se generarán dinámicamente con JavaScript -->
+        </section>
+
+        <!-- Botón reiniciar para pruebas/demo (opcional) -->
+        <button id="reset-btn" class="hidden">Volver a Jugar</button>
+
+        <footer class="footer">
+            <p class="terms-text">
+                * Al ingresar tu correo electrónico para obtener el premio de la promoción "Canjea y Gana", aceptás de manera expresa que tus datos personales sean incorporados a nuestras bases de datos para el envío de campañas de email marketing, publicidad y novedades comerciales. En cumplimiento de la Ley de Protección de Datos Personales N° 25.326 de la República Argentina, tratamos tu información de forma confidencial y segura. Tenés derecho a desuscribirte de manera gratuita en cualquier momento a través del enlace de baja incluido en cada comunicación. Promoción válida para locales adheridos en la Ciudad Autónoma de Buenos Aires (CABA).
+            </p>
+        </footer>
+    </main>
+
+    <!-- Modal para capturar email -->
+    <div id="email-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>¡Felicitaciones!</h2>
+                <p id="modal-prize-text" class="prize-highlight">Ganaste X</p>
+            </div>
+            <p class="modal-instruction">Ingresá tu mail para recibir tu premio y las instrucciones para canjearlo en el local.</p>
+            
+            <form id="claim-form">
+                <div class="input-group">
+                    <input type="email" id="user-email" placeholder="tu@email.com" required>
+                </div>
+                <button type="submit" class="submit-btn">ENVIAR PREMIO</button>
+            </form>
+            
+            <div id="success-message" class="hidden">
+                <div class="check-icon">✓</div>
+                <h3>¡Listo!</h3>
+                <p>Revisá tu casilla de correo (y spam por las dudas). ¡Te esperamos!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
